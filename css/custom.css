@@ -1,3 +1,7 @@
+.item-card {
+  max-width: 420px;
+}
+
 .item-container__image {
   min-height: 200px;
   max-width: 420px;
@@ -9,15 +13,15 @@
   padding: 20px;
   border: 1px solid rgb(255, 53, 53);
   border-radius: 16px;
-  background: rgba(255, 53, 53, .3);
+  background: rgba(255, 53, 53, 0.3);
   min-height: 400px;
   display: grid;
   place-items: center;
-  transition: background-color .3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .delete-section.selected {
-  background: rgba(255, 53, 53, .5);
+  background: rgba(255, 53, 53, 0.5);
 }
 
 .delete-section__icon {

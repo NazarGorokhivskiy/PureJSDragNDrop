@@ -7,7 +7,7 @@ const itemsContainer = document.getElementById("items_container");
 const getItemId = (id) => `item-${id}`;
 
 const itemTemplate = ({ id, title, desc }) => `
-<div id="${getItemId(id)}" class="item-container card mb-3" draggable="true">
+<div id="${getItemId(id)}" class="card mb-3 item-card" draggable="true">
   <img
     src="http://www.vokrugsveta.ru/img/bx/medialibrary/7f3/7f327150a4231009d34ca3190111f089.jpg"
     class="item-container__image card-img-top" alt="card">
