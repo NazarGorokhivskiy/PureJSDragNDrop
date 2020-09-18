@@ -7,4 +7,12 @@ The website was made by students of [the same programm](http://iot.lviv.ua), who
 ---
 
 ## Installation
-You could just download the project and open **index.html** file and you are all set!<br>
+1. Dowload and install Node from [official Node.js website](https://nodejs.org/)
+2. Install the **npx** util by running the following command:
+```
+$ npm i -g npx
+```
+Now, you can go to the root of your project and launch the project with command:
+```
+$ npm start
+```
