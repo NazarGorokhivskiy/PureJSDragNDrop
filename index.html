@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My App</title>
+  <title>DragNDrop App</title>
 
   <link rel="stylesheet" href="./css/custom.css">
 
@@ -40,13 +40,23 @@
           <button id="submit_button" type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
-      <div id="items_container" class="col-md-5 mt-5 mt-md-2 mx-auto">
+      <div id="items_container" class="col-md-4 mt-5 mt-md-2 mx-auto">
+      </div>
+      <div class="col-md-4">
+        <div class="p-4">
+          <div id="delete-section" class="delete-section">
+            <div class="text-center">
+              <img class="delete-section__icon mb-4" src="./assets/basket.svg" alt="basket">
+              <div>Drop here to delete</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-database.js"></script>
 
   <script>
@@ -62,7 +72,7 @@
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-  </script>
+  </script> -->
   <script type="module" src="./js/index.js"></script>
 </body>
 
