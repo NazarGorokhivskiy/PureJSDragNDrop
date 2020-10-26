@@ -6,10 +6,14 @@ import {
 } from "./dom_util.js";
 
 const submitButton = document.getElementById("submit_button");
+const findButton = document.getElementById("find_button");
+const cancelFindButton = document.getElementById("cancel_find_button");
+const findInput = document.getElementById("find_input");
+
 
 let hamsters = [];
 
-const addItem = ({ title, desc }) => {
+const addItem = ({ desc, title }) => {
   const generatedId = uuid.v1();
 
   const newItem = {
@@ -36,6 +40,18 @@ submitButton.addEventListener("click", (event) => {
     desc: description,
   });
 });
+
+findButton.addEventListener("click", () => {
+  const foundHamsters = hamsters.filter(hamster => hamster.title.search(findInput.value) !== -1);
+
+  renderItemsList(foundHamsters);
+});
+
+cancelFindButton.addEventListener("click", () => {
+  renderItemsList(hamsters);
+
+  findInput.value = "";
+})
 
 // main code
 

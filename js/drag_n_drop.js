@@ -27,6 +27,7 @@ export const onDragNDrop = (element) => (event) => {
   let shiftX = event.clientX - element.getBoundingClientRect().left;
   let shiftY = event.clientY - element.getBoundingClientRect().top;
 
+  
   function moveAt(element, event) {
     element.style.left = `${event.pageX - shiftX}px`;
     element.style.top = `${event.pageY - shiftY}px`;
