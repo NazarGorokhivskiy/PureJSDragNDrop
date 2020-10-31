@@ -14,19 +14,6 @@ const findInput = document.getElementById("find_input");
 
 let hamsters = [];
 
-const addItem = ({ description, title }) => {
-  const generatedId = uuid.v1();
-
-  const newItem = {
-    id: generatedId,
-    title,
-    description,
-  };
-
-  addItemToPage(newItem);
-};
-
-
 const onEditItem = async (e) => {
   const itemId = e.target.id.replace(EDIT_BUTTON_PREFIX, "");
 
