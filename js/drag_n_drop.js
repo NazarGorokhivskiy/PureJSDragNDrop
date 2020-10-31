@@ -20,7 +20,7 @@ function removeItem(element) {
   element.remove();
 }
 
-export const onDragNDrop = (element) => (event) => {
+export const onDragNDrop = (element, onRemove) => (event) => {
   element.style.position = "absolute";
   element.style.zIndex = 1000;
 
@@ -71,7 +71,8 @@ export const onDragNDrop = (element) => (event) => {
     element.onmouseup = null;
 
     if (isAboveDelete) {
-      removeItem(element);
+      element.remove();
+      onRemove(element.id);
     } else {
       placeItemBack(element);
     }
