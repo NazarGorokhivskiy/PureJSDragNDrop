@@ -14,9 +14,7 @@ const baseRequest = async ({ urlPath = "", method = "GET", body = null }) => {
       reqParams.body = JSON.stringify(body);
     }
 
-    const rawResponse = await fetch(`${RESOURSE_URL}${urlPath}`, reqParams);
-
-    return await rawResponse.json();
+    return await fetch(`${RESOURSE_URL}${urlPath}`, reqParams);
   } catch (error) {
     console.error("HTTP ERROR: ", error);
   }
@@ -24,11 +22,16 @@ const baseRequest = async ({ urlPath = "", method = "GET", body = null }) => {
 
 // public functionality
 
-export const getAllHamsters = () => baseRequest({ method: "GET" });
+export const getAllHamsters = async () => {
+  const rawResponse = await baseRequest({ method: "GET" });
+
+  return await rawResponse.json();
+};
 
 export const postHamster = (body) => baseRequest({ method: "POST", body });
 
-export const updateHamster = (id, body) => baseRequest({ urlPath: `/${id}`, method: "PATCH", body });
+export const updateHamster = (id, body) =>
+  baseRequest({ urlPath: `/${id}`, method: "PATCH", body });
 
 export const deleteHamster = (id) =>
   baseRequest({ urlPath: `/${id}`, method: "DELETE" });
